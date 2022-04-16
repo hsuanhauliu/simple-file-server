@@ -9,7 +9,7 @@ Docker
 
 ```bash
 docker build -t simple_file_server:latest .
-docker run --mount type=bind,source="$(pwd)"/static,target=/app/static -p 8080:80 --name simple_file_server simple_file_server:latest
+docker run --rm --mount type=bind,source="$(pwd)"/static,target=/app/static -p 8080:80 --name simple_file_server simple_file_server:latest
 ```
 
 Your files will be served under: http://localhost:8080/static/ (e.g. `http://localhost:8080/static/test.log`).
