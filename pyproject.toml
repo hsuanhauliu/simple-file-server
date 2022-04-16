@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "simple-file-server"
+version = "0.1.0"
+description = ""
+authors = ["Hsuan-Hau Liu <hsuanhauliu@gmail.com>"]
+license = "MIT"
+packages = [
+    { include = "simple_file_server" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = "^0.75.1"
+uvicorn = "^0.17.6"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
